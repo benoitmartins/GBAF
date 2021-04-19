@@ -53,15 +53,29 @@
 
     <section class="form">
         <h2>Changer ma question secrète et ma réponse</h2>
+
         <form method="post" novalidate>
             <input type="hidden" name="account_form" value="questionAnswer" />
-            <p><label for="question">Ma nouvelle question : </label><br /><input type="text" name="question" id="question" value="<?= $user['question']; ?>" required /></p>
+
+            <p><label for="question">Ma nouvelle question : </label><br />
+
+
+            <input type="text" name="question" id="question" value="<?= $user['question']; ?>" /></p>
+
             <p class="error"><?= isset($errorQuestion) ? $errorQuestion : '' ?></p>
-            <p><label for="answer">Ma nouvelle réponse : </label><br /><input type="text" name="answer" id="answer" value="<?= $user['answer']; ?>" required /></p>
+            </form>
+
+            <form method="post" novalidate>
+            <input type="hidden" name="account_form" value="questionAnswer" />
+            <p><label for="answer">Ma nouvelle réponse : </label><br /><input type="text" name="account_form" id="newAnswer"  value= "<?= $_SESSION['answer']; ?>"/></p>
+
+
             <p class="error"><?= isset($errorAnswer) ? $errorAnswer : '' ?></p>
             <p class="confirm"><?= isset($confirmQuestionAnswer) ? $confirmQuestionAnswer : '' ?></p>
+
             <input type="submit" value="Valider les changements">
         </form>
+
     </section>
 
 </main>

@@ -33,8 +33,9 @@
             <?php foreach ($actors as $actor) : ?>
                 <div class="acteur">
                     <div class="presentation_acteur">
+
                         <figure>
-                            <img class="logo_acteur" src="<?= 'img' . DIRECTORY_SEPARATOR . $actor['logo_file']; ?>" alt="logo de l'acteur">
+                            <img class="logo_acteur" src="<?= /*'img' . DIRECTORY_SEPARATOR .*/ $actor['logo_file']; ?>" alt="logo de l'acteur">
                         </figure>
                         <figcaption hidden>Logo de <?= $actor['name']; ?></figcaption>
                         <div class="description">

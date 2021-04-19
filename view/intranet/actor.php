@@ -5,7 +5,7 @@
 <main>
     <section id="presentation_acteur">
         <figure class="logo_page_acteur">
-            <img src="<?= 'img' . DIRECTORY_SEPARATOR . $actor['logo_file']; ?>" alt="logo de l'acteur"/>
+            <img src="<?= /*'img' . DIRECTORY_SEPARATOR .*/ $actor['logo_file']; ?>" alt="logo de l'acteur"/>
         </figure>
         <figcaption hidden>Logo de <?= $actor['name']; ?></figcaption>
         <div class="description_page_acteur">

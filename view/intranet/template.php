@@ -37,7 +37,7 @@
         <?= $pageContent ?>
 
         <footer>
-            <p><a href="#">Mentions légales</a> | <a href="#">Contact</a></p>
+            <p><a href="mentions_legales.php">Mentions légales</a></p>
         </footer>
     </body>
 </html>

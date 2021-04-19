@@ -16,6 +16,7 @@
             </form>
         <?php }
 
+
         if ($_POST['change_pass_form'] == 'username' AND !isset($errorUsername) OR isset($errorAnswer)) { ?>
             <label>Votre question secrète :</label>
             <p id="question"><?= $question; ?></p>

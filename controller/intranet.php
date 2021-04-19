@@ -16,6 +16,8 @@ function connexion($usernamePost, $passPost)
         $_SESSION['lastname'] = $user['lastname'];
         $_SESSION['firstname'] = $user['firstname'];
         $_SESSION['username'] = $user['username'];
+        $_SESSION['question'] = $user['question'];
+        $_SESSION['answer'] = $user['answer'];
         header('Location: index.php?action=home');
         exit();
     } else {
@@ -84,7 +86,6 @@ function register($lastnamePost, $firstnamePost, $usernamePost, $passPost, $chec
     }
 
 
-    include('view/intranet/register.php');
 }
 
 function pageForgetpass()
@@ -225,6 +226,7 @@ function changeQuestionAnswer($questionPost, $answerPost)
         $errorAnswer = 'La réponse est vide ou est trop longue';
     } else {
         updateQuestionAnswer($newQuestion, $newAnswer, $_SESSION['username']);
+        $_SESSION['answer'] = $newAnswer;
         $confirmQuestionAnswer = 'Vos question/réponse ont bien été changées';
         $user = getUser($_SESSION['username']);
     }
