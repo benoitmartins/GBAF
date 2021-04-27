@@ -35,18 +35,31 @@
     text-decoration: none;
     color: #FF0000;
 }
-@media screen and (max-device-width: 1020px) {
-    header {
+
+@media all and (max-width: 750px) {
+
+    #header {
         flex-direction: column;
         align-items: center;
         height: 120px;
+        border-style: none;
     }
-    header #logo {
-        text-align: center;
-        height: 70px;
-    }
+    #logo {
+    justify-content: center;
+    margin-right: 30px;
+    }    
     #user {
         margin: 0;
+        border-bottom: solid black 1px;
+    }
+    #account {
+        margin-top: 100px;
+    }
+    #presentation {
+        margin-top: 100px;
+    }
+    #presentation_acteur {
+        margin-top: 100px;
     }
 }
 /* index home */
@@ -151,7 +164,7 @@ li {
 .button:hover {
     opacity: 0.8;
 }
-@media screen and (min-width: 1020px) {
+@media all and (min-width: 1020px) {
     #presentation .presentationListActeurs {
         justify-content: center;
     }
@@ -159,7 +172,7 @@ li {
         margin: 20px;
     }
 }
-@media screen and (max-width: 1020px) {
+@media all and (max-width: 1020px) {
     .acteur {
         flex-direction: column;
     }
@@ -174,7 +187,7 @@ li {
         color: #fff;
     }
 }
-@media screen and (max-device-width: 600px) {
+@media all and (max-width: 600px) {
     .acteur {
         padding: 20px 50px 20px 50px;
         width: 80%;
